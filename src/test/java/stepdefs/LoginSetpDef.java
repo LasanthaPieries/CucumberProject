@@ -31,17 +31,33 @@ public class LoginSetpDef {
 
 	}
 
+	@And("I click on the Login Link")
+	public void i_click_on_the_Login_Link() {
+		// Locate web element and click on it
+		WebElement loginBtn = driver.findElement(By.linkText("Log in"));
+		loginBtn.click();
+
+	}
+	
 	@When("I enter the correct username and password")
 	public void i_enter_the_correct_username_and_password() {
 		WebElement UserName = driver.findElement(By.name("user_login"));
 		WebElement Password = driver.findElement(By.id("password"));
 		UserName.sendKeys("Lasantha.pieries@gmail.com");
-		Password.sendKeys("Test@45678");
+		Password.sendKeys("Rtmsalnl@jb40");
 
+	}
+	
+	@And("I click on the Login Button")
+	public void i_click_on_the_Login_Button() {
+		// Locate web element and click on it
+		WebElement LoginBt2 = driver.findElement(By.name("btn_login"));
+		LoginBt2.click();
 	}
 
 	@Then("I should land on the home page")
 	public void i_should_land_on_the_home_page() {
+		System.out.println("I am inside home page");
 	}
 
 	@When("I enter the incorrect username and password")
@@ -59,21 +75,6 @@ public class LoginSetpDef {
 		WebElement Error = driver.findElement(By.id("msg_box"));
 		String ActError = Error.getText();
 		Assert.assertEquals(ExpError, ActError);	
-	}
-	
-	@And("I click on the Login Link")
-	public void i_click_on_the_Login_Link() {
-		// Locate web element and click on it
-		WebElement loginBtn = driver.findElement(By.linkText("Log in"));
-		loginBtn.click();
-
-	}
-
-	@And("I click on the Login Button")
-	public void i_click_on_the_Login_Button() {
-		// Locate web element and click on it
-		WebElement LoginBt2 = driver.findElement(By.name("btn_login"));
-		LoginBt2.click();
 	}
 	
 	@When("I enter the username as {string} and password as {string}")

@@ -1,13 +1,13 @@
 Feature: This feature would be creating a calculator for Add and Subtract
 
-  @sanity
+  
   Scenario: To Add two numbers
     Given I have a calculator
     When I add 4 and 5
     Then I should get the result as 9
 
   Scenario Outline: This sceanrio is to subtract, multiply and divide 2 numbers
-    Given I have calculator
+    Given I have a calculator
     When I add number1 as <num1> and number2 as <num2>
     Then I should get the answer in <result>
 
@@ -25,4 +25,4 @@ Feature: This feature would be creating a calculator for Add and Subtract
       | 5 |
       | 4 |
       | 3 |
-    Then I should get the result as 17
+    Then I should compute the result as 17

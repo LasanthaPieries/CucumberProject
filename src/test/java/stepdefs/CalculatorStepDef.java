@@ -27,11 +27,6 @@ public class CalculatorStepDef {
 		Assert.assertEquals(expResult, result);
 	}
 
-	@Given("I have calculator")
-	public void i_have_calculator() {
-		System.out.println("Opened the calculator");
-	}
-
 	@When("I add number1 as {int} and number2 as {int}")
 	public void i_add_number1_as_and_number2_as(int num1, int num2) {
 		result = num1 + num2;
@@ -53,4 +48,10 @@ public class CalculatorStepDef {
 			
 	}
 	
+	@Then("I should compute the result as {int}")
+	public void i_should_compute_the_result_as(int int1) {
+	    // Write code here that turns the phrase above into concrete actions
+		int expResult = 17;
+		Assert.assertEquals(expResult, int1);
+	}	
 }
