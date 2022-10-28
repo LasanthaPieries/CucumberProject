@@ -14,7 +14,7 @@ public class CalculatorStepDef {
 
 	@Given("I have a calculator")
 	public void i_have_a_calculator() {
-		System.out.println("Opened the calculator");
+		System.out.println("Open the calculator");
 	}
 
 	@When("I add {int} and {int}")

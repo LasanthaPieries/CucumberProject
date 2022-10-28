@@ -32,11 +32,10 @@ public class LoginSetpDef {
 	}
 
 	@And("I click on the Login Link")
-	public void i_click_on_the_Login_Link() {
+	public void i_click_on_the_Login_Link() throws Throwable {
 		// Locate web element and click on it
-		WebElement loginBtn = driver.findElement(By.linkText("Log in"));
+		WebElement loginBtn = driver.findElement(By.className("login"));
 		loginBtn.click();
-
 	}
 	
 	@When("I enter the correct username and password")
@@ -68,7 +67,6 @@ public class LoginSetpDef {
 		Password.sendKeys("Test@1234");
 
 	}
-
 	@Then("I should get the error message {string}")
 	public void i_should_get_the_error_message(String ExpError) {
 	    // Write code here that turns the phrase above into concrete actions

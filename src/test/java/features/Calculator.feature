@@ -1,13 +1,14 @@
-Feature: This feature would be creating a calculator for Add and Subtract
+Feature: Calculator Functions
 
-  
-  Scenario: To Add two numbers
+  Background: 
     Given I have a calculator
+
+	@sanity
+  Scenario: To Add two numbers
     When I add 4 and 5
     Then I should get the result as 9
 
-  Scenario Outline: This sceanrio is to subtract, multiply and divide 2 numbers
-    Given I have a calculator
+  Scenario Outline: This sceanrio is to add 2 numbers in a table
     When I add number1 as <num1> and number2 as <num2>
     Then I should get the answer in <result>
 
@@ -17,8 +18,7 @@ Feature: This feature would be creating a calculator for Add and Subtract
       |   30 |   40 |     70 |
       |   50 |   40 |     90 |
 
-  Scenario: To Add two numbers
-    Given I have a calculator
+  Scenario: To Add more than 2 numbers
     When I add below numbers
       | 3 |
       | 2 |
